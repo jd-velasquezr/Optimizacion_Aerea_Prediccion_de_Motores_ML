@@ -1,5 +1,7 @@
 **PROYECTO DE CERTIFICACIÓN DE INTELIGENCIA ARTIFICIAL**
 
+En el archivo "Proyecto_Final.ipynb" Encontrará el respectivo código empleado.
+
 **INTEGRANTES DEL GRUPO** :
 
 - Juan David Velásquez
