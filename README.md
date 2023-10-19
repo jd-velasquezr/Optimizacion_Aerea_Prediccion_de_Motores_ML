@@ -1,4 +1,3 @@
-# Título del Proyecto:
 # Optimización aérea: Predicción de motores de avión con Machine Learning
 
 # INTRODUCCIÓN:
