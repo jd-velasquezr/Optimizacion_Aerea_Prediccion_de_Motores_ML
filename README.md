@@ -57,7 +57,7 @@ Se realizaron pruebas con 5 diferentes clasificadores utilizando el método grid
 
 ![](https://github.com/NathaliaRivadeneira/Proyecto-inteligencia-artificial/blob/main/Imagenes/perceptron%20mp.PNG)
 
-**CONCLUSIONES**
+# **CONCLUSIONES**
 
 - Entre los cinco clasificadores puestos a prueba, los dos que mejor resultado obtuvieron fueron las máquinas de soporte vectorial (SVM) y las redes neuronales, con un valor de coeficiente de correlación de Matthews dede 0.9341 y 0.9352 respectivamente. En este caso, ambos clasificadores obtuvieron una calificación relativamente alta con el dataset de pruebas con un valor muy cercano entre sí, por lo que, ambas técnicas pueden ser opciones apropiadas para dar solución al problema de clasificación.
 - En general, es preciso resaltar que los clasificadores utilizados para llevar a cabo la tarea de predicción (o clasificación) entre tres diferentes tipos de motor de aeronave, tuvieron un puntaje superior a 86 %, siendo entonces el que menor puntaje obtuvo fue el clasificador de Naive Bayes gaussiano, que a pesar de que su calificación es de un 87.1 % sigue siendo un método viable para el análisis del problema en cuestión, puesto que está a una diferencia de alrededor de un 6% con los mejores clasificadores experimentados en el desarrollo del proyecto.
