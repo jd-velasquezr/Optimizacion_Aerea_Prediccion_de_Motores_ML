@@ -3,7 +3,6 @@
 **INTEGRANTES DEL GRUPO** :
 
 - Juan David Velásquez
-- Nathalia Rivadeneira
 
 **INTRODUCCIÓN**
 
