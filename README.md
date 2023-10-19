@@ -16,15 +16,20 @@ El conjunto de datos se divide en 80% para entrenamiento y 20% para validación,
 
 El proyecto también incluye un análisis de componentes principales (PCA) para reducir la dimensionalidad de las características, seguido de la evaluación de cinco clasificadores diferentes. Se utilizan métricas como precisión, F1-Score, Recall y el coeficiente de correlación de Matthews para evaluar el rendimiento de los clasificadores.
 
-# Regresión Logística: Se exploran diferentes hiperparámetros, como la norma de la penalidad y el parámetro de regularización.
+# Regresión Logística: 
+Se exploran diferentes hiperparámetros, como la norma de la penalidad y el parámetro de regularización.
 
-# Máquinas de Soporte Vectorial (SVM): Se consideran múltiples funciones de Kernel, parámetros de regularización y enfoques de clasificación OvA y OvO.
+# Máquinas de Soporte Vectorial (SVM): 
+Se consideran múltiples funciones de Kernel, parámetros de regularización y enfoques de clasificación OvA y OvO.
 
-# K Vecinos más Cercanos (KNN): Se evalúan varios parámetros, incluyendo el número de vecinos, el tamaño de hoja y la métrica de distancia.
+# K Vecinos más Cercanos (KNN): 
+Se evalúan varios parámetros, incluyendo el número de vecinos, el tamaño de hoja y la métrica de distancia.
 
-# Naive-Bayes Gaussiano: Se realiza una evaluación con configuraciones predeterminadas.
+# Naive-Bayes Gaussiano: 
+Se realiza una evaluación con configuraciones predeterminadas.
 
-# Redes Neuronales (Perceptrón Multicapa): Se ajustan parámetros como el tamaño de las capas ocultas, funciones de activación, el solver, el parámetro alfa de regularización y la tasa de aprendizaje.
+# Redes Neuronales (Perceptrón Multicapa): 
+Se ajustan parámetros como el tamaño de las capas ocultas, funciones de activación, el solver, el parámetro alfa de regularización y la tasa de aprendizaje.
 
 Este proyecto es una exploración en profundidad de la aplicación de técnicas de inteligencia artificial en la clasificación de tipos de motor de aeronaves. Se espera que sea una contribución interesante y valiosa para la comunidad de la inteligencia artificial y la aviación.
 
