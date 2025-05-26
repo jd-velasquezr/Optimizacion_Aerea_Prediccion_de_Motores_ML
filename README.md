@@ -1,65 +1,99 @@
-# Optimización aérea: Predicción de motores de avión con Machine Learning
+# ✈️ Aerial Optimization: Aircraft Engine Prediction Using Machine Learning
 
-# INTRODUCCIÓN:
-Bienvenido al repositorio del Proyecto de Certificación de Inteligencia Artificial "Optimización aérea: Predicción de motores de avión con Machine Learning", una iniciativa que aborda la evaluación del rendimiento de aeronaves con el fin de determinar su idoneidad para misiones específicas. El rendimiento de una aeronave es un factor crítico en la aviación, y esta certificación utiliza técnicas de inteligencia artificial para analizar y predecir el tipo de motor de una aeronave basándose en sus especificaciones de vuelo.
+## 🔍 Introduction
 
-# DATASET:
-El conjunto de datos utilizado en este proyecto consta de información de 861 aeronaves y sus características, incluyendo velocidad máxima, velocidad de crucero, alcance, entre otros. No obstante, este dataset presenta desafíos, como valores faltantes, formatos de datos variados y unidades diversas para las características.
+Welcome to the Artificial Intelligence Certification Project repository: **“Aerial Optimization: Aircraft Engine Prediction Using Machine Learning.”** This initiative focuses on evaluating aircraft performance to determine their suitability for specific missions. Aircraft performance is a critical factor in aviation, and this project leverages AI techniques to analyze and predict the type of engine based on flight specifications.
 
-# CARACTERÍSTICAS:
-El conjunto de datos incluye diversas características, como el modelo del avión, el nombre de la empresa fabricante, el tipo de motor, la potencia del eje, la velocidad máxima, la velocidad de pérdida en condiciones desfavorables, la capacidad de combustible, entre otros.
+---
 
-# DESARROLLO:
-El proyecto comienza con la limpieza de datos, que implica eliminar columnas no relevantes para la clasificación del tipo de motor. Luego, se convierten las etiquetas de los motores en valores numéricos. El dataset limpio se guarda como "Aircraft_Handbook.csv."
+## 📊 Dataset
 
-El conjunto de datos se divide en 80% para entrenamiento y 20% para validación, con una distribución ponderada basada en los tipos de motor.
+The dataset comprises information on **861 aircraft**, including various characteristics such as maximum speed, cruising speed, and range. However, the dataset presents certain challenges, including missing values, inconsistent data formats, and varied units across features.
 
-El proyecto también incluye un análisis de componentes principales (PCA) para reducir la dimensionalidad de las características, seguido de la evaluación de cinco clasificadores diferentes. Se utilizan métricas como precisión, F1-Score, Recall y el coeficiente de correlación de Matthews para evaluar el rendimiento de los clasificadores.
+---
 
-# Regresión Logística: 
-Se exploran diferentes hiperparámetros, como la norma de la penalidad y el parámetro de regularización.
+## 📌 Features
 
-# Máquinas de Soporte Vectorial (SVM): 
-Se consideran múltiples funciones de Kernel, parámetros de regularización y enfoques de clasificación OvA y OvO.
+The dataset contains numerous features, including:
 
-# K Vecinos más Cercanos (KNN): 
-Se evalúan varios parámetros, incluyendo el número de vecinos, el tamaño de hoja y la métrica de distancia.
+* Aircraft model
+* Manufacturer name
+* Engine type
+* Shaft horsepower
+* Maximum speed
+* Stall speed under adverse conditions
+* Fuel capacity
+* ...and more.
 
-# Naive-Bayes Gaussiano: 
-Se realiza una evaluación con configuraciones predeterminadas.
+---
 
-# Redes Neuronales (Perceptrón Multicapa): 
-Se ajustan parámetros como el tamaño de las capas ocultas, funciones de activación, el solver, el parámetro alfa de regularización y la tasa de aprendizaje.
+## ⚙️ Development Process
 
-Este proyecto es una exploración en profundidad de la aplicación de técnicas de inteligencia artificial en la clasificación de tipos de motor de aeronaves. Se espera que sea una contribución interesante y valiosa para la comunidad de la inteligencia artificial y la aviación.
+The project begins with **data cleaning**, eliminating irrelevant columns for engine classification. Engine type labels are then **converted to numeric values**, and the cleaned dataset is saved as `Aircraft_Handbook.csv`.
 
-**RESULTADOS**
+The dataset is split into **80% for training** and **20% for validation**, with stratified sampling based on engine type to maintain balance.
 
-Se realizaron pruebas con 5 diferentes clasificadores utilizando el método gridsearch cv
+A **Principal Component Analysis (PCA)** is used to reduce feature dimensionality, followed by performance evaluation using **five different classifiers**. Metrics such as **Accuracy, F1-Score, Recall**, and **Matthews Correlation Coefficient (MCC)** are used to assess performance.
 
-- Regresión logística
+---
 
-![](https://github.com/NathaliaRivadeneira/Proyecto-inteligencia-artificial/blob/main/Imagenes/regresion%20logistica%20p.PNG)
+## 🤖 Machine Learning Models
 
-- Máquinas de soporte vectorial (SVM)
+### 🔹 Logistic Regression
 
-![](https://github.com/NathaliaRivadeneira/Proyecto-inteligencia-artificial/blob/main/Imagenes/maquinas%20de%20sop%20vec%20p.PNG)
+Explored various hyperparameters including penalty norms and regularization strength.
 
-- KNN – K vecinos más cercanos
+### 🔹 Support Vector Machines (SVM)
 
-![](https://github.com/NathaliaRivadeneira/Proyecto-inteligencia-artificial/blob/main/Imagenes/KNN%20P.PNG)
+Tested different kernel functions, regularization parameters, and OvA/OvO classification strategies.
 
-- Naive bayes gausiano
+### 🔹 K-Nearest Neighbors (KNN)
 
-![](https://github.com/NathaliaRivadeneira/Proyecto-inteligencia-artificial/blob/main/Imagenes/naive%20bayes%20p.PNG)
+Evaluated number of neighbors, leaf size, and distance metrics.
 
-- Redes neuronales
+### 🔹 Gaussian Naive Bayes
 
-![](https://github.com/NathaliaRivadeneira/Proyecto-inteligencia-artificial/blob/main/Imagenes/perceptron%20mp.PNG)
+Tested with default configurations for baseline comparison.
 
-# **CONCLUSIONES**
+### 🔹 Neural Networks (Multilayer Perceptron)
 
-- Entre los cinco clasificadores puestos a prueba, los dos que mejor resultado obtuvieron fueron las máquinas de soporte vectorial (SVM) y las redes neuronales, con un valor de coeficiente de correlación de Matthews dede 0.9341 y 0.9352 respectivamente. En este caso, ambos clasificadores obtuvieron una calificación relativamente alta con el dataset de pruebas con un valor muy cercano entre sí, por lo que, ambas técnicas pueden ser opciones apropiadas para dar solución al problema de clasificación.
-- En general, es preciso resaltar que los clasificadores utilizados para llevar a cabo la tarea de predicción (o clasificación) entre tres diferentes tipos de motor de aeronave, tuvieron un puntaje superior a 86 %, siendo entonces el que menor puntaje obtuvo fue el clasificador de Naive Bayes gaussiano, que a pesar de que su calificación es de un 87.1 % sigue siendo un método viable para el análisis del problema en cuestión, puesto que está a una diferencia de alrededor de un 6% con los mejores clasificadores experimentados en el desarrollo del proyecto.
-- Durante el desarrollo de la fase de análisis por componentes principales, a pesar de que se hizo una reducción dimensional de 16 a 14 características, al momento de reducirla a 13 o inferior a esta, la suma de la varianza explicada se reducía a menos del 90%, por tanto, con esto, es preciso afirmar que el dataset en su mayoría cuenta con características mayormente independientes, tales que una gran parte describen más del 95% de la información del dataset en cuestión, por tanto, solo fue posible reducir 2 dimensiones del total de las características entregadas sin afectar en mayor medida la pérdida de datos o información que será utilizada para el proceso de clasificación en las diferentes técnicas implementadas.
-- A pesar de que las redes neuronales implementadas en el desarrollo del proyecto (MLPC de la librería de scikit) obtuvieron el mejor resultado, en efecto, son las que más tardan en finalizar el proceso de búsqueda por rejilla a través de validación cruzada para el mejor clasificador, tomando más de 3 minutos en procesar, adicionalmente, el tiempo que tarda en entrenar es de 248.57 s, lo que quiere decir que es un método computacionalmente exigente y lento para utilizar en aplicaciones con máquinas de hardware limitado, por tanto, debe requerirse pruebas previas para evaluar su viabilidad en proyectos con estas características.
+Tuned hidden layer sizes, activation functions, solvers, regularization alpha, and learning rates.
+
+---
+
+## 📈 Results
+
+The models were fine-tuned using **GridSearchCV**. Below are the final results per model:
+
+* **Logistic Regression**
+  ![](https://github.com/NathaliaRivadeneira/Proyecto-inteligencia-artificial/blob/main/Imagenes/regresion%20logistica%20p.PNG)
+
+* **Support Vector Machines (SVM)**
+  ![](https://github.com/NathaliaRivadeneira/Proyecto-inteligencia-artificial/blob/main/Imagenes/maquinas%20de%20sop%20vec%20p.PNG)
+
+* **K-Nearest Neighbors (KNN)**
+  ![](https://github.com/NathaliaRivadeneira/Proyecto-inteligencia-artificial/blob/main/Imagenes/KNN%20P.PNG)
+
+* **Gaussian Naive Bayes**
+  ![](https://github.com/NathaliaRivadeneira/Proyecto-inteligencia-artificial/blob/main/Imagenes/naive%20bayes%20p.PNG)
+
+* **Neural Networks (MLP Classifier)**
+  ![](https://github.com/NathaliaRivadeneira/Proyecto-inteligencia-artificial/blob/main/Imagenes/perceptron%20mp.PNG)
+
+---
+
+## 🧾 Conclusions
+
+* Among the five classifiers, **SVM and Neural Networks** performed the best, achieving **Matthews Correlation Coefficients of 0.9341 and 0.9352**, respectively. Both are strong candidates for engine classification tasks.
+
+* All classifiers achieved over **86% accuracy**, with **Gaussian Naive Bayes** scoring the lowest at **87.1%**, still making it a viable option with only a \~6% difference compared to top performers.
+
+* During PCA, dimensionality was reduced from 16 to 14 features without major loss in explained variance. Reducing further to 13 or fewer dropped total explained variance below **90%**, confirming the dataset contains highly independent and informative features.
+
+* While **Neural Networks (MLPC)** achieved the highest score, it also had the **longest runtime**, taking over **3 minutes for grid search** and around **248.57 seconds for training**. Thus, although powerful, it may not be suitable for environments with limited hardware and should be tested accordingly.
+
+---
+
+This project presents a detailed application of machine learning techniques for classifying aircraft engine types and aims to be a valuable contribution to both the **AI** and **aeronautics** communities.
+
+---
